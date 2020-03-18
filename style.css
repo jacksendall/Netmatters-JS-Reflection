@@ -610,6 +610,26 @@ body {
   }
 }
 
+#slider {
+  overflow: hidden;
+  height: 100vh;
+}
+
+#slider .slides {
+  display: block;
+  width: 6800px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  width: 100vw;
+  height: 100vh;
+}
+
 .banner {
   color: white;
   display: -webkit-box;

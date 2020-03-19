@@ -612,13 +612,12 @@ body {
 
 #slider {
   overflow: hidden;
-  height: 100vh;
+  position: relative;
 }
 
 #slider .slides {
   display: block;
-  width: 6800px;
-  height: 100vh;
+  width: 700vw;
   margin: 0;
   padding: 0;
 }
@@ -627,7 +626,79 @@ body {
   float: left;
   list-style-type: none;
   width: 100vw;
-  height: 100vh;
+}
+
+#slider .slider-controls {
+  z-index: 100;
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 44px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
+#slider .slider-controls #active span {
+  opacity: 100%;
+}
+
+#slider .slider-controls #active span:hover {
+  opacity: 100%;
+}
+
+#slider .slider-controls #active span:after {
+  content: '';
+  position: absolute;
+  border: 2px solid white;
+  top: -6px;
+  left: 4px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+}
+
+#slider .slider-controls .dot {
+  position: relative;
+  display: inline-block;
+}
+
+#slider .slider-controls .dot span {
+  background: white;
+  width: 11px;
+  height: 11px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 30px;
+  opacity: 50%;
+}
+
+#slider .slider-controls .dot span:hover {
+  opacity: 30%;
+}
+
+.banner-webdesign {
+  background-image: url("img/webdesign.jpg");
+}
+
+.banner-it {
+  background-image: url("img/IT-banner.jpg");
+}
+
+.banner-telecoms {
+  background-image: url("img/telecoms-banner.jpg");
+}
+
+.banner-software {
+  background-image: url("img/bespoke-software-banner.jpg");
+}
+
+.banner-marketing {
+  background-image: url("img/digital-marketing-banner.jpg");
+}
+
+.banner-security {
+  background-image: url("img/security-banner.jpg");
 }
 
 .banner {
@@ -644,7 +715,6 @@ body {
   left: 0;
   width: 100%;
   height: calc(100vh - 210px);
-  background-image: url("img/webdesign.jpg");
   background-size: cover;
   background-position: center;
   -webkit-box-pack: left;
@@ -671,9 +741,37 @@ body {
   z-index: 3;
 }
 
-.banner .content-container a {
+.banner .content-container #design {
   background-color: #926fb1;
   border-color: #926fb1;
+}
+
+.banner .content-container #it {
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+
+.banner .content-container #telecoms {
+  background-color: #d64541;
+  border-color: #d64541;
+}
+
+.banner .content-container #software {
+  background-color: #67809f;
+  border-color: #67809f;
+}
+
+.banner .content-container #marketing {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+.banner .content-container #security {
+  background-color: #f62459;
+  border-color: #f62459;
+}
+
+.banner .content-container a {
   border-radius: 3px;
   text-transform: uppercase;
   line-height: 50px;

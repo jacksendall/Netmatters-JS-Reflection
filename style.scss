@@ -562,11 +562,10 @@ body {
 
 #slider {
     overflow: hidden;
-    height: 100vh;
+    position: relative;
     .slides {
         display: block;
-        width: 6800px;
-        height: 100vh;
+        width: 700vw;
         margin: 0;
         padding: 0;
     }
@@ -574,8 +573,75 @@ body {
         float: left;
         list-style-type: none;
         width: 100vw;
-        height: 100vh;
     }
+    .slider-controls {
+        z-index: 100;
+        color: white;
+        display: block;
+        position: absolute;
+        bottom: 44px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        #active {
+            span {
+                opacity: 100%;
+                &:hover {
+                    opacity: 100%;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    border: 2px solid white;
+                    top: -6px;
+                    left: 4px;
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .dot {
+            position: relative;
+            display: inline-block;
+            span {
+                background: white;
+                width: 11px;
+                height: 11px;
+                margin: 0 10px;
+                display: block;
+                border-radius: 30px;
+                opacity: 50%;
+                &:hover {
+                    opacity: 30%;
+                }
+            }
+        }
+    }
+}
+
+.banner-webdesign {
+    background-image: url("img/webdesign.jpg");
+}
+
+.banner-it {
+    background-image: url("img/IT-banner.jpg");
+}
+
+.banner-telecoms {
+    background-image: url("img/telecoms-banner.jpg");
+}
+
+.banner-software {
+    background-image: url("img/bespoke-software-banner.jpg");
+}
+
+.banner-marketing {
+    background-image: url("img/digital-marketing-banner.jpg");
+}
+
+.banner-security {
+    background-image: url("img/security-banner.jpg");
 }
 
 .banner {
@@ -589,7 +655,6 @@ body {
     left: 0;
     width: 100%;
     height: calc(100vh - 210px);
-    background-image: url("img/webdesign.jpg");
     // background-color: #ccc;
     background-size: cover;
     background-position: center;
@@ -603,9 +668,31 @@ body {
         display: flex;
         padding: 0;
         z-index: 3;
-        a {
+        #design {
             background-color: $design-a;
             border-color: $design-a;
+        }
+        #it {
+            background-color: $support-a;
+            border-color: $support-a;
+        }
+        #telecoms {
+            background-color: $services-a;
+            border-color: $services-a;
+        }
+        #software {
+            background-color: $software-a;
+            border-color: $software-a;
+        }
+        #marketing {
+            background-color: $marketing-a;
+            border-color: $marketing-a;
+        }
+        #security {
+            background-color: $security-a;
+            border-color: $security-a;
+        }
+        a {
             border-radius: 3px;
             text-transform: uppercase;
             line-height: 50px;

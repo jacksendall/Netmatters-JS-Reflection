@@ -17,10 +17,9 @@ $(function() {
     var $slideContainer = $slider.find('.slides');
     var $slides = $slideContainer.find('.slide');
     var currentSlide = 1;
-    var $sliderControls = $('.slider-controls');
-    var $slideButtons = $sliderControls.find('.dot');
+    var $slideDots = $('.slider-controls').find('.dot');
 
-    console.log($slides);
+    console.log($slideDots);
 
 
     var myInterval;
@@ -35,6 +34,10 @@ $(function() {
                     $slideContainer.css('margin-left', 0);
                 };
             });
+            //update active dot
+            for (currentSlide; currentSlide < $slideDots.length;) {
+
+            }
         }, 4500)
     }
 
@@ -44,7 +47,12 @@ $(function() {
 
     //listen for mouseover and pause
     $slider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
-    //resume on mouse leave
+
+    //listen for click on Dots
+    $slideDots.on('click', () => {
+        var activeDot = event.target.parentNode;
+        activeDot.setAttribute("id", "active");
+    });
 
     startSlider();
 });

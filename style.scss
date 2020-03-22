@@ -564,59 +564,67 @@ body {
     overflow: hidden;
     position: relative;
     .slides {
-        display: block;
-        width: 700vw;
+        // display: block;
+        // width: 700vw;
         margin: 0;
         padding: 0;
     }
     .slide {
-        float: left;
-        list-style-type: none;
         width: 100vw;
     }
-    .slider-controls {
-        z-index: 100;
-        color: white;
-        display: block;
+    .slick-dots {
         position: absolute;
-        bottom: 44px;
-        right: 0;
-        left: 0;
+        display: block;
+        z-index: 100;
+        bottom: 0;
+        list-style: none;
         text-align: center;
-        #active {
-            span {
-                opacity: 100%;
-                &:hover {
-                    opacity: 100%;
-                }
-                &:after {
-                    content: '';
-                    position: absolute;
-                    border: 2px solid white;
-                    top: -6px;
-                    left: 4px;
-                    width: 23px;
-                    height: 23px;
-                    border-radius: 50%;
-                }
+        left: 0;
+        right: 0;
+        padding: 0;
+        margin-bottom: 55px;
+        .slick-active {
+            button {
+                opacity: 80%;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                border: 2px solid white;
+                opacity: 80%;
+                top: 4px;
+                left: -5px;
+                width: 23px;
+                height: 23px;
+                border-radius: 50%;
             }
         }
-        .dot {
+        li {
             position: relative;
             display: inline-block;
-            span {
+            margin: 0 10px;
+            color: white;
+            button {
+                height: 13px;
+                width: 13px;
+                font-size: 0;
                 background: white;
-                width: 11px;
-                height: 11px;
-                margin: 0 10px;
-                display: block;
-                border-radius: 30px;
-                opacity: 50%;
+                border-radius: 50%;
+                border-color: white;
+                border-style: none;
+                color: white;
+                opacity: 40%;
+                &:focus {
+                    outline: none;
+                }
                 &:hover {
-                    opacity: 30%;
+                    opacity: 80%;
                 }
             }
         }
+    }
+    .slick-slider {
+        position: relative;
     }
 }
 
@@ -645,6 +653,7 @@ body {
 }
 
 .banner {
+    position: relative;
     color: white;
     display: flex;
     border-top: 1px solid rgba(51, 54, 69, 0.5);

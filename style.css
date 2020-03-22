@@ -616,65 +616,72 @@ body {
 }
 
 #slider .slides {
-  display: block;
-  width: 700vw;
   margin: 0;
   padding: 0;
 }
 
 #slider .slide {
-  float: left;
-  list-style-type: none;
   width: 100vw;
 }
 
-#slider .slider-controls {
-  z-index: 100;
-  color: white;
-  display: block;
+#slider .slick-dots {
   position: absolute;
-  bottom: 44px;
-  right: 0;
-  left: 0;
+  display: block;
+  z-index: 100;
+  bottom: 0;
+  list-style: none;
   text-align: center;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin-bottom: 55px;
 }
 
-#slider .slider-controls #active span {
-  opacity: 100%;
+#slider .slick-dots .slick-active button {
+  opacity: 80%;
 }
 
-#slider .slider-controls #active span:hover {
-  opacity: 100%;
-}
-
-#slider .slider-controls #active span:after {
+#slider .slick-dots .slick-active:after {
   content: '';
   position: absolute;
   border: 2px solid white;
-  top: -6px;
-  left: 4px;
+  opacity: 80%;
+  top: 4px;
+  left: -5px;
   width: 23px;
   height: 23px;
   border-radius: 50%;
 }
 
-#slider .slider-controls .dot {
+#slider .slick-dots li {
   position: relative;
   display: inline-block;
-}
-
-#slider .slider-controls .dot span {
-  background: white;
-  width: 11px;
-  height: 11px;
   margin: 0 10px;
-  display: block;
-  border-radius: 30px;
-  opacity: 50%;
+  color: white;
 }
 
-#slider .slider-controls .dot span:hover {
-  opacity: 30%;
+#slider .slick-dots li button {
+  height: 13px;
+  width: 13px;
+  font-size: 0;
+  background: white;
+  border-radius: 50%;
+  border-color: white;
+  border-style: none;
+  color: white;
+  opacity: 40%;
+}
+
+#slider .slick-dots li button:focus {
+  outline: none;
+}
+
+#slider .slick-dots li button:hover {
+  opacity: 80%;
+}
+
+#slider .slick-slider {
+  position: relative;
 }
 
 .banner-webdesign {
@@ -702,6 +709,7 @@ body {
 }
 
 .banner {
+  position: relative;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;

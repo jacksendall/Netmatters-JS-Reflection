@@ -10,11 +10,12 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick.css" />
     <script src="https://kit.fontawesome.com/399b336c17.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/jquery-3.4.1.min.js"></script>
+
 </head>
 
 <body>
@@ -236,8 +237,8 @@
     <!-- Big sliding image element -->
 
     <div id="slider">
-        <ul class="slides">
-            <li class="slide">
+        <div class="slides">
+            <div class="slide">
                 <div class="banner banner-webdesign">
                     <div class="big-img-container">
                     </div>
@@ -251,8 +252,8 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <li class="slide">
+            </div>
+            <div class="slide">
                 <div class="banner banner-it">
                     <div class="big-img-container">
                     </div>
@@ -266,8 +267,8 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <li class="slide">
+            </div>
+            <div class="slide">
                 <div class="banner banner-telecoms">
                     <div class="big-img-container">
                     </div>
@@ -281,8 +282,8 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <li class="slide">
+            </div>
+            <div class="slide">
                 <div class="banner banner-software">
                     <div class="big-img-container">
                     </div>
@@ -296,8 +297,8 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <li class="slide">
+            </div>
+            <div class="slide">
                 <div class="banner banner-marketing">
                     <div class="big-img-container">
                     </div>
@@ -311,8 +312,8 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <li class="slide">
+            </div>
+            <div class="slide">
                 <div class="banner banner-security">
                     <div class="big-img-container">
                     </div>
@@ -326,35 +327,12 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <!-- the first slide is repeated as the last slide and then is instantly switched to the first slide -->
-            <li class="slide">
-                <div class="banner banner-webdesign">
-                    <div class="big-img-container">
-                    </div>
-                    <div class="content-container container">
-                        <div class="container">
-                            <h1>Web Design</h1>
-                            <p>For businesses looking to make a strong<br>and effective first impression.</p>
-                            <a class="btn more" id="design">Find out more
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="slider-controls">
-            <div class="dot 1" id="active"><span></span></div>
-            <div class="dot 2"><span></span></div>
-            <div class="dot 3"><span></span></div>
-            <div class="dot 4"><span></span></div>
-            <div class="dot 5"><span></span></div>
-            <div class="dot 6"><span></span></div>
+            </div>
+
         </div>
-        <script type="text/javascript" src="js/slider.js"></script>
+
     </div>
-    <!-- <script type="text/javascript" src="js/slick-1.8.1/slick/slick.min.js"></script> -->
+
 
     <!-- Services grid section -->
 
@@ -712,11 +690,15 @@
             </div>
         </div>
     </div>
-    <!-- Skrips an dat -->
+
 
     <!-- jQuery-->
 
+    <script src="js/jquery-3.4.1.min.js"></script>
 
+    <!-- Skrips an dat -->
+    <script type="text/javascript" src="js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/slickinit.js"></script>
 </body>
 
 </html>

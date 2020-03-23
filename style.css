@@ -648,8 +648,8 @@ body {
   opacity: 80%;
   top: 4px;
   left: -5px;
-  width: 23px;
-  height: 23px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
 }
 
@@ -661,7 +661,7 @@ body {
 }
 
 #slider .slick-dots li button {
-  height: 13px;
+  height: 14px;
   width: 13px;
   font-size: 0;
   background: white;

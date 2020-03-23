@@ -47,7 +47,26 @@ body {
     line-height: 1.42857143;
     overflow-x: hidden;
 }
+//SLIDING SIDE MENU
 
+.sidebar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    width: 275px;
+    height: 100%;
+
+}
+.content-wrapper{
+    z-index: 200;
+
+}
+
+
+header{
+    background-color: white;
+}
 .search-form-mobile-wrapper {
     display: none;
     margin-top: 11px;
@@ -558,6 +577,12 @@ body {
     .container {
         width: auto;
     }
+}
+
+#container{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 #slider {
@@ -1398,6 +1423,9 @@ footer {
     }
     .min992 {
         display: block;
+    }
+    .sidebar {
+        width: 350px;
     }
 }
 

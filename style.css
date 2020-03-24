@@ -30,6 +30,7 @@
 }
 
 body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -40,17 +41,99 @@ body {
   overflow-x: hidden;
 }
 
-.sidebar {
+#page-cover {
+  width: calc(100vw-350px);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+@media screen and (max-width: 992px) {
+  #page-cover {
+    width: 275px;
+  }
+}
+
+.menu-active .content-wrapper {
+  -webkit-transform: translate(-350px, 0);
+          transform: translate(-350px, 0);
+}
+
+@media screen and (max-width: 992px) {
+  .menu-active .content-wrapper {
+    -webkit-transform: translate(-275px, 0);
+            transform: translate(-275px, 0);
+  }
+}
+
+.menu-active #page-cover {
+  opacity: 80%;
+  z-index: 9001;
+}
+
+#sidebar {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 0;
-  width: 275px;
+  z-index: -10000;
+  text-transform: uppercase;
+  width: 350px;
   height: 100%;
+  background-color: #333645;
+}
+
+@media screen and (max-width: 992px) {
+  #sidebar {
+    width: 275px;
+  }
+}
+
+#sidebar ul {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  line-height: 3rem;
+}
+
+#sidebar ul li a {
+  display: block;
+  width: 100%;
+  color: white;
+  line-height: 3.2rem;
+  padding: 0px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#sidebar ul li ul[role=menu] li {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+#sidebar ul li ul[role=menu] li a {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-left: 20px;
+}
+
+#sidebar ul li ul[role=menu] li a::before {
+  content: '\00BB';
+  padding-right: 15px;
 }
 
 .content-wrapper {
   z-index: 200;
+  background-color: white;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 header {
@@ -625,6 +708,16 @@ header {
   .container {
     width: auto;
   }
+}
+
+.blackout::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  content: '';
 }
 
 #container {

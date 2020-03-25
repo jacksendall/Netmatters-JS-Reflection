@@ -84,6 +84,39 @@ body {
     }
 }
 
+.cookiebar-active {
+    .cookie-container {
+        bottom: 0px;
+    }
+}
+
+.cookie-container {
+    display: flex;
+    position: fixed;
+    bottom: -120px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: $nm-dark;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.5);
+    transition: all 500ms;
+    p {
+        color: white;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    button {
+        display: inline;
+        margin-left: 20px;
+        padding: 0 20px;
+    }
+}
+
 #sidebar {
     position: absolute;
     right: 0;
@@ -142,6 +175,96 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+#mobile-sidebar {
+    padding: 20px;
+    ul {
+        li {
+            a[role=tile] {
+                outline: 1px solid rgba(0, 0, 0, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 3px;
+                font-size: 1.125rem;
+                padding: 20px 0 20px;
+                display: block;
+                text-align: center;
+                line-height: 1.275rem;
+                small {
+                    font-size: 0.625rem;
+                }
+                i {
+                    padding-bottom: 10px;
+                }
+                * {
+                    display: block;
+                }
+            }
+        }
+    }
+    .mobile-section {
+        margin-top: 20px;
+        &:hover {
+            a[role=tile] {
+                background: rgba(255, 255, 255, 0.05);
+            }
+        }
+    }
+    ul[role=menu] {
+        margin-top: 20px;
+        border-radius: 5px;
+        li {
+            a {
+                padding-left: 10px;
+                &::before {
+                    content: '';
+                    padding: 0;
+                }
+            }
+        }
+    }
+    li[role=web] {
+        a {
+            i {
+                color: $design-a;
+            }
+        }
+    }
+    li[role=support] {
+        a {
+            i {
+                color: $support-a;
+            }
+        }
+    }
+    li[role=telecoms] {
+        a {
+            i {
+                color: $services-a;
+            }
+        }
+    }
+    li[role=software] {
+        a {
+            i {
+                color: $software-a;
+            }
+        }
+    }
+    li[role=marketing] {
+        a {
+            i {
+                color: $marketing-a;
+            }
+        }
+    }
+    li[role=security] {
+        a {
+            i {
+                color: $security-a;
             }
         }
     }

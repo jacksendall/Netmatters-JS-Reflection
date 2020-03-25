@@ -43,7 +43,7 @@ body {
 
 #page-cover {
   width: calc(100vw-350px);
-  height: 100vh;
+  height: 100%;
   position: fixed;
   left: 0;
   right: 0;
@@ -56,13 +56,15 @@ body {
 
 @media screen and (max-width: 992px) {
   #page-cover {
-    width: 275px;
+    width: calc(100vw -275px);
   }
 }
 
 .menu-active .content-wrapper {
   -webkit-transform: translate(-350px, 0);
           transform: translate(-350px, 0);
+  overflow: hidden;
+  height: 100vh;
 }
 
 @media screen and (max-width: 992px) {
@@ -77,12 +79,17 @@ body {
   z-index: 9001;
 }
 
+.menu-active #sidebar {
+  z-index: 0;
+}
+
 #sidebar {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
-  z-index: -10000;
+  z-index: -1;
   text-transform: uppercase;
+  overflow: auto;
   width: 350px;
   height: 100%;
   background-color: #333645;
@@ -104,6 +111,10 @@ body {
   line-height: 3rem;
 }
 
+#sidebar ul .sb-title:hover #sb-hdr {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 #sidebar ul li a {
   display: block;
   width: 100%;
@@ -112,6 +123,10 @@ body {
   padding: 0px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+#sidebar ul li a:hover {
+  text-decoration: none;
 }
 
 #sidebar ul li ul[role=menu] li {
@@ -134,6 +149,7 @@ body {
   background-color: white;
   -webkit-transition: all 500ms;
   transition: all 500ms;
+  overflow: auto;
 }
 
 header {

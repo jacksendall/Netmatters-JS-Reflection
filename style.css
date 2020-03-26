@@ -97,6 +97,7 @@ body {
   right: 0;
   z-index: 10;
   background-color: #333645;
+  max-height: 109px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   outline: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -112,6 +113,14 @@ body {
   line-height: 1rem;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 702px) {
+  .cookie-container p {
+    font-size: 0.5rem;
+    margin: 0;
+    line-height: 1.8;
+  }
 }
 
 .cookie-container button {
@@ -869,7 +878,7 @@ header {
 #slider .slick-dots {
   position: absolute;
   display: block;
-  z-index: 100;
+  z-index: 9;
   bottom: 0;
   list-style: none;
   text-align: center;
